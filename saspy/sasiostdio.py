@@ -1549,7 +1549,7 @@ Will use HTML5 for this SASsession.""")
       return
 
    def sasdata2dataframe(self, table: str, libref: str ='', dsopts: dict = None, rowsep: str = '\x01',
-                         colsep: str = '\x02', port: int=0, wait: int=10, **kwargs) -> '<Pandas Data Frame object>':
+                         colsep: str = '\x02', port: int=0, wait: int=60, **kwargs) -> '<Pandas Data Frame object>':
       """
       This method exports the SAS Data Set to a Pandas Data Frame, returning the Data Frame object.
       table   - the name of the SAS Data Set you want to export to a Pandas Data Frame
@@ -1797,7 +1797,7 @@ Will use HTML5 for this SASsession.""")
       return df
 
    def sasdata2dataframeCSV(self, table: str, libref: str ='', dsopts: dict = None, opts: dict = None, 
-                            tempfile: str=None, tempkeep: bool=False, port: int=0, wait: int=10, **kwargs) -> '<Pandas Data Frame object>':
+                            tempfile: str=None, tempkeep: bool=False, port: int=0, wait: int=60, **kwargs) -> '<Pandas Data Frame object>':
       """
       This method exports the SAS Data Set to a Pandas Data Frame, returning the Data Frame object.
       table    - the name of the SAS Data Set you want to export to a Pandas Data Frame
@@ -2013,7 +2013,7 @@ Will use HTML5 for this SASsession.""")
 
    def sasdata2dataframeDISK(self, table: str, libref: str ='', dsopts: dict = None,  
                              rowsep: str = '\x01', colsep: str = '\x02', tempfile: str=None, 
-                             tempkeep: bool=False, port: int=0, wait: int=10, **kwargs) -> '<Pandas Data Frame object>':
+                             tempkeep: bool=False, port: int=0, wait: int=60, **kwargs) -> '<Pandas Data Frame object>':
       """
       This method exports the SAS Data Set to a Pandas Data Frame, returning the Data Frame object.
       table    - the name of the SAS Data Set you want to export to a Pandas Data Frame
